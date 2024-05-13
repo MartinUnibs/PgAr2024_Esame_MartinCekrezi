@@ -47,6 +47,18 @@ public class Duel {
 
     public void fight() { //TODO: ritorna il vincitore
         //TODO: here
+        p1.summonTamaGolem();
+        p2.summonTamaGolem();
+        do {
+            if(p1.getCurrentTamaGolem.isDead()) {
+                p1.summonTamaGolem();
+            } else if (p2.getCurrentTamaGolem.isDead()) {
+                p2.summonTamaGolem();
+            }
+            while(false){
+                //TODO:
+            }
+        }while (p1.canPlay && p2.canPlay); //questi metodi servono per
         /*
         * do {
         * si scontranto
