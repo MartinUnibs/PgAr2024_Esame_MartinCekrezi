@@ -18,15 +18,17 @@ public class Duel {
         int start = 0; //TODO: random
         int end = start + difficulty;
         elements = List.of(Arrays.copyOfRange(Element.values(), start, end));
+        int stonePerTamaGolem = (int) Math.ceil((double) (difficulty + 1) / 3) + 1;
+        int nTamaGolem = (int) Math.ceil((double) ((difficulty - 1) * (difficulty - 2)) / (2 * stonePerTamaGolem));
         // Stone reserve initialization
-        int amount = 0; // TODO: calcolo numero di pietre per elemento
+        int amount = (int) Math.ceil((double) (2 * nTamaGolem * stonePerTamaGolem) / difficulty); // TODO: calcolo numero di pietre per elemento
         for (Element element : elements) {
             stones.put(element, amount);
         }
         // Players initialization
-        Player p1 = new Player(); //TODO: number of tamagolem, P;
-        Player p2 = new Player(); //TODO: number of tamagolem, P;
-        //TODO: balance
+        Player p1 = new Player(/*nTamaGolem, stonePerTamaGolem*/); //TODO: number of tamagolem, P;
+        Player p2 = new Player(/*nTamaGolem, stonePerTamaGolem*/); //TODO: number of tamagolem, P;
+        this.balance = new BalanceManager(difficulty);
     }
 
     public void start() {
@@ -39,6 +41,7 @@ public class Duel {
 
     public void setup() {
         //TODO: here
+        //Nel metodo setup, vengono richiamati i metodi per la creazione del grafo.
     }
 
     public void fight() { //TODO: ritarna il vincitore
