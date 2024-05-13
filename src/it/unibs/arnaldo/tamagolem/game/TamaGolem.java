@@ -1,8 +1,36 @@
 package it.unibs.arnaldo.tamagolem.game;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 //TODO: DOC
 public class TamaGolem {
-    //TODO: everything
 
-    //TODO: ogni golem ha una "QUEUE" di pietre (in realtà elementi)
+    private static final int HP = 100;
+
+    int hp;
+    Deque<Element> stones;
+
+    public TamaGolem() {
+        hp = HP;
+        stones = new ArrayDeque<>();
+    }
+
+    public void hit(int damage) {
+        hp -= damage;
+    }
+
+    public boolean isDead() {
+        return hp <= 0;
+    }
+
+    public void addStone(Element stone) {
+        stones.add(stone);
+    }
+
+    public Element throwStone() {
+        Element thrown = stones.remove();
+        stones.add(thrown);
+        return thrown;
+    }
 }
