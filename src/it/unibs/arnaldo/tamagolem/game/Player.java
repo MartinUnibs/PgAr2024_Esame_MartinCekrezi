@@ -50,4 +50,6 @@ public class Player {
             System.out.println(t);
         }
      }
+
+     //TODO: create canPlay method.
 }
