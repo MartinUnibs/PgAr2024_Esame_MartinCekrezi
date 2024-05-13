@@ -29,7 +29,7 @@ public class Player {
         return !roster.isEmpty();
     }
 
-    public TamaGolem getCurrentTamagolem() {
+    public TamaGolem getCurrentTamaGolem() {
         return roster.peekFirst(); // Return null if empty doest not remove
     }
 
