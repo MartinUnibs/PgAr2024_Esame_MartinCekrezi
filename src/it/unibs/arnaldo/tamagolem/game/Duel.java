@@ -34,21 +34,19 @@ public class Duel {
         // Players initialization
         Player p1 = new Player(nTamaGolem, stonePerTamaGolem); //TODO: number of tamagolem, P;
         Player p2 = new Player(nTamaGolem, stonePerTamaGolem); //TODO: number of tamagolem, P;
-        // Graph initialization
-        this.balance = new BalanceManager(difficulty);
     }
 
     public void start() {
         //TODO: winner
         setup();
-        fight();
-        end();
+        int winner = fight();
+        end(winner);
         //TODO: da finire ??
     }
 
-    public void setup() {
-        //TODO: here
-        //Nel metodo setup, vengono richiamati i metodi per la creazione del grafo.
+    private void setup() {
+        this.balance = new BalanceManager(elements.size());
+        //TODO: add a message (ex. "Gli equilibri del mondo sono stati generati ecc...")
     }
 
     private int fight() { //TODO: ritorna il vincitore
@@ -75,7 +73,7 @@ public class Duel {
         }
     }
 
-    public void end() { //TODO: param
+    private void end(int winner) {
         //TODO: here
     }
 }
