@@ -1,5 +1,6 @@
 import it.kibo.fp.lib.AnsiColors;
 import it.kibo.fp.lib.RandomDraws;
+import it.unibs.arnaldo.tamagolem.game.TamaGolem;
 import it.unibs.arnaldo.tamagolem.graph.BalanceGenerator;
 import it.unibs.arnaldo.tamagolem.main.UserInteraction;
 import org.junit.Assert;
@@ -23,17 +24,28 @@ public class BalanceGeneratorTest {
             UserInteraction.printColoredMessage(String.format(GENERATION_MESSAGE, nodes), AnsiColors.YELLOW);
             int[][] graph = BalanceGenerator.generateBalance(nodes);
             UserInteraction.printGraph();
-            if (!isValid(graph)) {
+            if (isValid(graph)) {
+                UserInteraction.printColoredMessage(VALID_MESSAGE, AnsiColors.GREEN);
+            } else {
                 UserInteraction.printColoredMessage(INVALID_MESSAGE, AnsiColors.RED);
                 Assert.fail();
-            } else {
-                UserInteraction.printColoredMessage(VALID_MESSAGE, AnsiColors.GREEN);
             }
         }
         assertTrue(true);
     }
 
-    private boolean isValid(int[][] graoh) {
-        return true; //TODO: here
+    private boolean isValid(int[][] graph) {
+        int size = graph.length;
+        int rowSum;
+        for (int i = 0; i < size; i++) {
+            rowSum = 0;
+            for (int j = 0; j < size; j++) {
+                rowSum += graph[i][j];
+                if (i == j && graph[i][j] != 0) return false; // diagonal
+                if (graph[i][j] > TamaGolem.MAX_HP) return false; // single cell
+            }
+            if (rowSum != 0) return false; // row
+        }
+        return true;
     }
 }
