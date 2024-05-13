@@ -7,7 +7,15 @@ import java.util.Deque;
 public class Player {
     //TODO: everything here
     Deque <TamaGolem> roster;
-    public Player() {
+    public Player(int nTamagolem, int stonePerTamaGolem) {
         roster = new ArrayDeque<TamaGolem>();
+        for(int i=0; i < nTamagolem; i++){
+            roster.push(new TamaGolem(/* stonePerTamaGolem */));
+        }
     }
+
+    public Deque<TamaGolem> getRoster() {
+        return roster;
+    }
+
 }
