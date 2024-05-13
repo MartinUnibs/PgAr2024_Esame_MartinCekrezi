@@ -51,9 +51,9 @@ public class Duel {
         p1.summonTamaGolem();
         p2.summonTamaGolem();
         do {
-            if(p1.getCurrentTamaGolem.isDead()) {
+            if(p1.getCurrentTamagolem().isDead()) {
                 p1.summonTamaGolem();
-            } else if (p2.getCurrentTamaGolem.isDead()) {
+            } else if (p2.getCurrentTamagolem().isDead()) {
                 p2.summonTamaGolem();
             }
             while(false){
