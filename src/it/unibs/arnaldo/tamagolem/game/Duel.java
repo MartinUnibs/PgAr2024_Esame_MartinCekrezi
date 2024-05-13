@@ -30,6 +30,7 @@ public class Duel {
     }
 
     public void start() {
+        //TODO: winner
         setup();
         fight();
         end();
@@ -40,11 +41,16 @@ public class Duel {
         //TODO: here
     }
 
-    public void fight() {
+    public void fight() { //TODO: ritarna il vincitore
         //TODO: here
+        /*
+        * do {
+        * si scontranto
+        * } while (p1.puo.giocare && p2.puo.giocare);
+        * */
     }
 
-    public void end() {
+    public void end() { //TODO: param
         //TODO: here
     }
 }
