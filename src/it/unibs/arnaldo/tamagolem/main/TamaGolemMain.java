@@ -9,7 +9,7 @@ public class TamaGolemMain {
         //TODO: WELCOME
         boolean choice = true;
         do {
-            int difficulty = 0; //TODO: scegli livello difficolta
+            int difficulty = UserInteraction.chooseDifficulty(); //TODO: scegli livello difficolta
             Duel duel = new Duel(difficulty);
             duel.start();
             choice = false; //TODO: scelta utente se vuole continuare

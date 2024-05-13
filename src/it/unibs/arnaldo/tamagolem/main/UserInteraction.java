@@ -11,18 +11,21 @@ package it.unibs.arnaldo.tamagolem.main;
 
 
 import it.kibo.fp.lib.AnsiColors;
+import it.kibo.fp.lib.InputData;
 
 public class UserInteraction {
     private static final int ERROR_SLEEP_TIME = 5000;
     private static final int CLEAR_SLEEP_TIME = 3000;
+    public static final String GAME_DIFFICULTY_MESSAGE = "Imposta la difficoltà della partita: ";
+    public static final int MIN_DIFFICULTY = 3;
+    public static final int MAX_DIFFICULTY = 10;
 
     public static void welcome() {
         //TODO: all.
     }
 
     public static int chooseDifficulty() {
-        //TODO: all.
-        return 0;
+        return InputData.readIntegerBetween(coloredMessage(GAME_DIFFICULTY_MESSAGE, AnsiColors.CYAN), MIN_DIFFICULTY, MAX_DIFFICULTY);
     }
 
     public static void farewell() {
