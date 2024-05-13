@@ -8,8 +8,8 @@ public class TamaGolem {
 
     private static final int HP = 100;
 
-    int hp;
-    Deque<Element> stones;
+    private int hp;
+    private Deque<Element> stones;
 
     public TamaGolem() {
         hp = HP;
