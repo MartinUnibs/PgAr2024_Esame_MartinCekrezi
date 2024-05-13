@@ -2,7 +2,6 @@ package it.unibs.arnaldo.tamagolem.graph;
 
 //TODO: DOC - l'indice della matrice è quello della lista elements
 public class BalanceManager {
-    //TODO: everything
 
     private int[][] graph = { //TODO: to remove
             {0, 1, -4, -6, 9},
@@ -13,13 +12,12 @@ public class BalanceManager {
     };
 
     public BalanceManager(int nodes) {
-        //TODO: da fare
+        //TODO: togliere il commento
         //this.graph = BalanceGenerator.generateBalance(nodes);
     }
 
     public int getDamage(int p1, int p2) {
-        //TODO: ritorna la mat[p1][p2];
-        return 0;
+        return graph[p1][p2];
     }
 
 }
