@@ -16,7 +16,7 @@ public class BalanceManager {
         //this.graph = BalanceGenerator.generateBalance(nodes);
     }
 
-    public int getDamage(int p1, int p2) {
-        return graph[p1][p2];
+    public int getDamage(int e1, int e2) {
+        return graph[e1][e2];
     }
 }
