@@ -1,18 +1,11 @@
 package it.unibs.arnaldo.tamagolem.main;
 
-//TODO: metodi per visualizzare tutto
-
-//TODO: DOC
-
-//TODO: copia dal precedente + sistema
-
-//TODO: public static String coloredMessage(String message, Color color)
-//TODO: anche printColoredMessage da modificare
-
-
 import it.kibo.fp.lib.AnsiColors;
 import it.kibo.fp.lib.InputData;
 
+//TODO: metodi per visualizzare tutto
+
+//TODO: DOC
 public class UserInteraction {
     private static final int ERROR_SLEEP_TIME = 5000;
     private static final int CLEAR_SLEEP_TIME = 3000;
@@ -22,7 +15,7 @@ public class UserInteraction {
     private static final String PLAY_AGAIN_MESSAGE = "Vuoi fare un altro scontro? ";
 
     public static void welcome() {
-        //TODO: all.
+        //TODO: all. + rules
     }
 
     public static int chooseDifficulty() {
