@@ -12,7 +12,7 @@ public class TamaGolemMain {
             int difficulty = UserInteraction.chooseDifficulty();
             Duel duel = new Duel(difficulty);
             duel.start();
-            choice = false; //TODO: scelta utente se vuole continuare
+            choice = UserInteraction.playAgain();
         } while (choice);
         UserInteraction.farewell();
     }
