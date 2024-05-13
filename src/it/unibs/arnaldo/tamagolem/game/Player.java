@@ -7,12 +7,15 @@ import java.util.Deque;
 public class Player {
     //TODO: everything here
 
+    final String EMPTY_ROSTER = "No more tamagolem's to send in battle!";
+
+
     //TODO: String name per il giocatore?
     Deque <TamaGolem> roster;
 
     public Player(int nTamagolem, int stonePerTamaGolem) {
 
-        roster = new ArrayDeque<TamaGolem>();
+        roster = new ArrayDeque<TamaGolem>(); // se tamagolem 0 , Player perde
 
         for(int i=0; i < nTamagolem; i++){
             //TODO: Nome per il tamagolem?
@@ -25,4 +28,12 @@ public class Player {
         return roster;
     }
 
+    public void removeFirstTamagolem() {
+        if(!roster.isEmpty()){
+            roster.pollFirst();
+        } else {
+            System.out.println(EMPTY_ROSTER); // colorare stringa ?
+        }
+
+    }
 }
