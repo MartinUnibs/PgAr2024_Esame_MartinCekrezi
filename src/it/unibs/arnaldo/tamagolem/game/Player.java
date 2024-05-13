@@ -28,12 +28,22 @@ public class Player {
         return roster;
     }
 
+    public TamaGolem getFirstTamagolem() {
+        return roster.peekFirst(); // Return null if empty doest not remove
+    }
+
     public void removeFirstTamagolem() {
         if(!roster.isEmpty()){
-            roster.pollFirst();
+            roster.pollFirst(); //remove first
         } else {
             System.out.println(EMPTY_ROSTER); // colorare stringa ?
         }
-
     }
+
+    // per test ??
+     public void printRoster(){
+        for(TamaGolem t : roster){
+            System.out.println(t);
+        }
+     }
 }
