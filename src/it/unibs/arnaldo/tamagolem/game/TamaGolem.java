@@ -6,13 +6,13 @@ import java.util.Deque;
 //TODO: DOC
 public class TamaGolem {
 
-    private static final int HP = 100;
+    public static final int MAX_HP = 100;
 
     private int hp;
     private Deque<Element> stones;
 
     public TamaGolem() {
-        hp = HP;
+        hp = MAX_HP;
         stones = new ArrayDeque<>();
     }
 
