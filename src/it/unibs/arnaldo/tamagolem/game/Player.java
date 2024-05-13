@@ -7,20 +7,17 @@ import java.util.Deque;
 public class Player {
     //TODO: everything here
 
-    final String EMPTY_ROSTER = "No more tamagolems to send in battle!";
+    private final String EMPTY_ROSTER = "No more tamagolems to send in battle!";
 
+    private Deque<TamaGolem> roster;
+    private int stonesPerTamaGolem;
 
-    //TODO: String name per il giocatore?
-    Deque <TamaGolem> roster;
-
-    public Player(int nTamagolem, int stonePerTamaGolem) {
-
+    public Player(int nTamaGolem, int stonesPerTamaGolem) {
+        this.stonesPerTamaGolem = stonesPerTamaGolem;
         roster = new ArrayDeque<TamaGolem>(); // se tamagolem 0 , Player perde
 
-        for(int i=0; i < nTamagolem; i++){
-            //TODO: Nome per il tamagolem?
-            //Idea: Elemento + nome arnaldo random, " Kibo fiamma " oppure " Phoenix etereo " ecc
-            roster.push(new TamaGolem(/* stonePerTamaGolem */));
+        for(int i=0; i < nTamaGolem; i++){
+            roster.push(new TamaGolem());
         }
     }
 
@@ -28,15 +25,22 @@ public class Player {
         return roster;
     }
 
-    public TamaGolem getFirstTamagolem() {
+    public TamaGolem getCurrentTamagolem() {
         return roster.peekFirst(); // Return null if empty doest not remove
     }
 
-    public void removeFirstTamagolem() {
+    public void removeCurrentTamagolem() {
         if(!roster.isEmpty()){
             roster.pollFirst(); //remove first
         } else {
             System.out.println(EMPTY_ROSTER); // colorare stringa ?
+        }
+    }
+
+    public void summonTamaGolem() {
+        //TODO: assign stones to tamagolem - quando lo cambiamo il tamagolem corrente ???
+        for (int i = 0; i < stonesPerTamaGolem; i++) {
+
         }
     }
 

@@ -29,6 +29,7 @@ public class Duel {
         // Players initialization
         Player p1 = new Player(nTamaGolem, stonePerTamaGolem); //TODO: number of tamagolem, P;
         Player p2 = new Player(nTamaGolem, stonePerTamaGolem); //TODO: number of tamagolem, P;
+        // Graph initialization
         this.balance = new BalanceManager(difficulty);
     }
 
