@@ -1,6 +1,6 @@
 package it.unibs.arnaldo.tamagolem.graph;
 
-//TODO: ODC
+//TODO: DOC
 public class BalanceGenerator {
     //TODO: everything here
 }

@@ -26,11 +26,12 @@ public class Duel {
         // Players initialization
         Player p1 = new Player(); //TODO: number of tamagolem, P;
         Player p2 = new Player(); //TODO: number of tamagolem, P;
+        //TODO: balance
     }
 
     public void start() {
         setup();
-        play();
+        fight();
         end();
         //TODO: da finire ??
     }
@@ -39,7 +40,7 @@ public class Duel {
         //TODO: here
     }
 
-    public void play() {
+    public void fight() {
         //TODO: here
     }
 

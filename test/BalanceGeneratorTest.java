@@ -2,7 +2,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
-public class TamaGolemTest {
+public class BalanceGeneratorTest {
 
     @Test
     public void firstTest() {
