@@ -22,7 +22,7 @@ public class BalanceGenerator {
         int[][] graph = new int[size][size];
         for (int i = 0; i < size; i++) {
             if (map.get(String.format(ROW_SUM, i)) == 0 ||
-                    (map.get(String.format(ROW_POSITIVES, i)) != 2 &&
+                    (map.get(String.format(ROW_POSITIVES, i)) != 2 && // TODO: NON 2 ma target (da calcolare)
                      map.get(String.format(ROW_NEGATIVES, i)) != 2)
                 ) {
                 //TODO: SET TARGET -> 10
@@ -57,6 +57,10 @@ public class BalanceGenerator {
             map.put(String.format(COL_POSITIVES, i), 0);
             map.put(String.format(ROW_NEGATIVES, i), 0);
             map.put(String.format(COL_NEGATIVES, i), 0);
+            //TODO; saranno da aggiungere anche i valori
+            // di archi uscenti e entranti per singola riga
+            // sia per la variazione, sia per i casi in cui
+            // il numero di nodi è pari (archi dispari)
         }
     }
 }
