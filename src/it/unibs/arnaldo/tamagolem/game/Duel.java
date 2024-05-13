@@ -45,7 +45,7 @@ public class Duel {
         //Nel metodo setup, vengono richiamati i metodi per la creazione del grafo.
     }
 
-    public void fight() { //TODO: ritarna il vincitore
+    public void fight() { //TODO: ritorna il vincitore
         //TODO: here
         /*
         * do {
