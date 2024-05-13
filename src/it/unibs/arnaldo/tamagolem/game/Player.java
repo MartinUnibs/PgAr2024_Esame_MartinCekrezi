@@ -25,6 +25,10 @@ public class Player {
         return roster;
     }
 
+    public boolean canPlay() {
+        return !roster.isEmpty();
+    }
+
     public TamaGolem getCurrentTamagolem() {
         return roster.peekFirst(); // Return null if empty doest not remove
     }
