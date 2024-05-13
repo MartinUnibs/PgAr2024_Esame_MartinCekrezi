@@ -19,5 +19,4 @@ public class BalanceManager {
     public int getDamage(int p1, int p2) {
         return graph[p1][p2];
     }
-
 }
