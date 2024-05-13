@@ -64,9 +64,9 @@ public class Duel {
                 /*Element p1.getCurrentTamagolem().throwStone();
                 p2.getCurrentTamagolem().throwStone();*/
             }
-        }while (p1.canPlay && p2.canPlay);
+        }while (p1.canPlay() && p2.canPlay());
 
-        if(p1.canPlay) {
+        if(p1.canPlay()) {
             return FIRST_PLAYER_WIN;
         } else {
             return SECOND_PLAYER_WIN;
