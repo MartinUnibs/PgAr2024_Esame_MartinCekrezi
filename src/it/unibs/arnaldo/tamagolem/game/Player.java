@@ -7,7 +7,7 @@ import java.util.Deque;
 public class Player {
     //TODO: everything here
 
-    final String EMPTY_ROSTER = "No more tamagolem's to send in battle!";
+    final String EMPTY_ROSTER = "No more tamagolems to send in battle!";
 
 
     //TODO: String name per il giocatore?
