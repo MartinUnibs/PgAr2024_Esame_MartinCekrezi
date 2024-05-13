@@ -18,6 +18,7 @@ public class Duel {
         int start = 0; //TODO: random
         int end = start + difficulty;
         elements = List.of(Arrays.copyOfRange(Element.values(), start, end));
+        //TODO: to refactor.
         int stonePerTamaGolem = (int) Math.ceil((double) (difficulty + 1) / 3) + 1;
         int nTamaGolem = (int) Math.ceil((double) ((difficulty - 1) * (difficulty - 2)) / (2 * stonePerTamaGolem));
         // Stone reserve initialization
