@@ -1,6 +1,9 @@
 package it.unibs.arnaldo.tamagolem.game;
 
-//TODO: DOC
+/*
+ * Enum containing all possible elements.
+ * Their drawn is sequential.
+ * */
 public enum Element {
     ARIA,
     ACQUA,

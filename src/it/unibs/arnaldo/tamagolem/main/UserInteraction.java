@@ -5,7 +5,16 @@ import it.kibo.fp.lib.InputData;
 
 //TODO: metodi per visualizzare tutto
 
-//TODO: DOC
+/*
+ * This class manages every interaction with the user,
+ * whether it's an input or an output. It follows this precise
+ * color scheme: TODO: COLOR SCHEME
+ * RED:
+ * GREEN:
+ * YELLOW:
+ * CYAN:
+ * PURPLE:
+ * */
 public class UserInteraction {
     private static final int ERROR_SLEEP_TIME = 5000;
     private static final int CLEAR_SLEEP_TIME = 3000;

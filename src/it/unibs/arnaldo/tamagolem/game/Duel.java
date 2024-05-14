@@ -5,7 +5,13 @@ import it.unibs.arnaldo.tamagolem.graph.BalanceManager;
 
 import java.util.*;
 
-//TODO: DOC - spiegare perché viene utilizzata una lista
+/*
+ * This class is the soul of the program, managing
+ * everything which revolves around a duel and its logic.
+ * It has many attributes, the most important being "elements".
+ * We chose to use a list instead of a set take advantage of the
+ * indexes (see BalanceManager class documentation)
+ * */
 public class Duel {
 
     private static final int ELEMENT_DRAW_MIN = 0;

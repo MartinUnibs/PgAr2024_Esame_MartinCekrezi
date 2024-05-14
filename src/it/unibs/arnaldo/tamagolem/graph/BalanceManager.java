@@ -16,6 +16,7 @@ public class BalanceManager {
         //this.graph = BalanceGenerator.generateBalance(nodes);
     }
 
+    // ROW -> first player (from) | COLUMN -> second player (to)
     public int getDamage(int e1, int e2) {
         return graph[e1][e2];
     }
