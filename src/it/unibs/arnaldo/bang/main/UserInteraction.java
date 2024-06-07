@@ -26,7 +26,13 @@ public class UserInteraction {
             "██║░░██║██║░░██║██║░╚███║██║░░██║███████╗██████╔╝╚█████╔╝  ░░╚██╔╝░╚██╔╝░███████╗██████╔╝░░░██║░░░\n" +
             "╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝╚══════╝╚═════╝░░╚════╝░  ░░░╚═╝░░░╚═╝░░╚══════╝╚═════╝░░░░╚═╝░░░";
     private static final String WELCOME_MESSAGE = "Welcome to Arnaldo West!";
-    private static final String INSTRUCTIONS = "1. ";
+    private static final String INSTRUCTIONS = "1. Select number of players\n" +
+            "2. Draw a Card\n" +
+            "3. Play a Card\n" +
+            "4. Discard a Card if you need to\n" +
+            "5. Try to survive\n" +
+            "6. Have fun\n" +
+            "7  Gloria ad artstozka \n"; // non è un rimasuglio di copia incolla, è voluto
     private static final String TABS = "\t\t";
     private static final String NUMBER_PRINTER = "%d\t\t";
     private static final String DOUBLE_ESCAPE_SEQUENCE = "\n\n";

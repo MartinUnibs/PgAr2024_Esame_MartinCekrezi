@@ -20,12 +20,17 @@ public class GameManager {
             "Time Limit",
             "Arnaldo generico"
     };
-    private static final String DRAW_MESSAGE = "You draw a card from the deck";
+    private static final String DRAW_MESSAGE = "You draw a card from the deck!";
+    private static final String DRAW_MESSAGE_2 = "You drew 2 cards from the deck!";
+    private static final String PLAY_MESSAGE = "Select what card to use: ";
 
     //TODO: DOC
     private int nPlayer;
     private ArrayList<Player> players;
     private ArrayList<Role> roles;
+
+    public Stack<Card> deck = loadDeck();
+
 
     public GameManager(int nPlayer) {
         this.nPlayer = nPlayer;
@@ -33,16 +38,22 @@ public class GameManager {
         this.roles = new ArrayList<>();
     }
 
-
     public void manageRound(){
         setRoles();
         setPlayers();
 
-        for (Player player : players) {
-            player.getDeck().toString();
-        }
         //TODO: MESS + PESCA CARTA
-        UserInteraction.printColoredMessage(DRAW_MESSAGE, AnsiColors.YELLOW);
+        UserInteraction.printColoredMessage(DRAW_MESSAGE_2, AnsiColors.YELLOW);
+        int myPlayerIndex = RandomDraws.drawInteger(0 , nPlayer - 1);
+        Player myPlayer = players.get(myPlayerIndex);
+        for (int i = 0; i < 2;i++){
+            drawFromDeck(deck,myPlayer);
+        }
+        UserInteraction.printColoredMessage(PLAY_MESSAGE, AnsiColors.YELLOW);
+
+        for(int i = 0; i < myPlayer.getDeck().size();i++){
+            myPlayer.getDeck().peek();
+        }
         //TODO:GIOCA CARTE
         //TODO: SCARTA CARTE
     }
@@ -84,8 +95,6 @@ public class GameManager {
         ArrayList<String> shuffledNames = new ArrayList<>(Arrays.asList(PLAYER_NAMES));
         Collections.shuffle(shuffledNames);
 
-        Stack<Card> deck = loadDeck();
-
         for(int i = 0; i < nPlayer; i++){
             Player player = new Player(shuffledNames.get(i), PF_DEF);
             players.add(player);
@@ -108,12 +117,12 @@ public class GameManager {
         if(nPlayer == 7){
             players.get(6).setRole(roles.get(1));
         }
-        int maxCard = PF_DEF;
+        int maxCard = PF_DEF -1;
         for(int i = 0; i < players.size();i++){
             if(players.get(i).getRole().equals(roles.getFirst())){
                 maxCard += 1;
             } else {
-                maxCard = PF_DEF;
+                maxCard = PF_DEF -1;
             }
             for (int j=0; j < maxCard; j++) {
                 drawFromDeck(deck,players.get(j));
@@ -134,9 +143,26 @@ public class GameManager {
     }
 
     public void drawFromDeck(Stack<Card> deck , Player player) {
-        int indexDraw = RandomDraws.drawInteger(0, deck.size() - 1);
-        player.drawCard(deck.get(indexDraw));
-        deck.remove(indexDraw);
+
+        int deckSize = 0;
+        for (Card card : deck) {
+            deckSize += card.getCopySize();
+        }
+
+        int indexDraw = RandomDraws.drawInteger(0, deckSize -1);
+        int currentIndex = 0;
+        for (Card card : deck) {
+            int cardCopySize = card.getCopySize();
+            if (indexDraw < currentIndex + cardCopySize) {
+                Copy drawnCopy = card.removeCopy();
+                player.drawCard(card);
+                if (card.getCopySize() == 0) {
+                    deck.remove(card);
+                }
+                break;
+            }
+            currentIndex += cardCopySize;
+        }
     }
 
 }

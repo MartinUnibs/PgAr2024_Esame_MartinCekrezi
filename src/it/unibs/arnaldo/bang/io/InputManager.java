@@ -45,7 +45,7 @@ public class InputManager {
 
     public Stack<Card> readDeck() {
     Stack<Card> deck = new Stack<>();
-        try (FileReader reader = new FileReader("FILE_PATH_HERE")) {
+        try (FileReader reader = new FileReader(FILE)) {
         JsonElement jsonElement = JsonParser.parseReader(reader);
         JsonObject jsonObject = jsonElement.getAsJsonObject();
 

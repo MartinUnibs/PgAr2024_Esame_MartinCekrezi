@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1304655e-d91b-4c11-b3ea-78261684ff97" name="Changes" comment="commit 2.1">
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/moduloextra/Taunt.java" afterDir="false" />
+    <list default="true" id="1304655e-d91b-4c11-b3ea-78261684ff97" name="Changes" comment="Brixia Taunt :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/io/InputManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/io/InputManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/main/BangMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/main/BangMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/main/UserInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/main/UserInteraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/moduloextra/Taunt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/moduloextra/Taunt.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +94,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717745366719</updated>
-      <workItem from="1717745367810" duration="26019000" />
+      <workItem from="1717745367810" duration="29297000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -137,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717767107306</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Brixia Taunt :)">
+      <option name="closed" value="true" />
+      <created>1717772913100</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1717772913100</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +165,7 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="commit 1.2" />
     <MESSAGE value="commit 2.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 2.1" />
+    <MESSAGE value="Brixia Taunt :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Brixia Taunt :)" />
   </component>
 </project>

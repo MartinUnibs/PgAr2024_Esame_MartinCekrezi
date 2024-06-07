@@ -1,6 +1,5 @@
 package it.unibs.arnaldo.bang.game;
 
-import java.util.ArrayList;
 import java.util.Stack;
 
 public class Card {
@@ -17,11 +16,22 @@ public class Card {
         this.copies = copies;
     }
 
+    public Copy removeCopy() {
+        if (!copies.isEmpty()) {
+            return copies.pop();
+        }
+        return null;
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getCopySize() {
+        return copies.size();
     }
 }
