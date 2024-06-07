@@ -3,13 +3,14 @@ package it.unibs.arnaldo.bang.game;
 import java.util.ArrayList;
 
 public class Player {
+    private String name;
     private int pf;
     private Role role;
     private ArrayList<Card> deck;
 
-    public Player(int pf, Role role) {
+    public Player(String name, int pf) {
+        this.name = name;
         this.pf = pf;
-        this.role = role;
     }
 
     public void drawCard(Card card) {
@@ -29,5 +30,15 @@ public class Player {
     }
     public void setPf(int pf) {
         this.pf = pf;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+    public void setRole(Role role) {
+        this.role = role;
+    }
+    public String getName() {
+        return name;
     }
 }

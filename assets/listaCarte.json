@@ -1,0 +1,425 @@
+{
+  "roles": [
+    "Sheriff",
+    "Outlaw",
+    "Deputy",
+    "Renegade"
+  ],
+  "characters": [
+    {
+      "hp": 4,
+      "name": "Bart Cassidy",
+      "description": "Each time he loses an HP, he immediately draws a card from the deck."
+    },
+    {
+      "hp": 3,
+      "name": "El Gringo",
+      "description": "Each time he loses an HP due to a card played by another player, he draws a card at random from that player’s hand (one for each lost HP). If that player has no cards in hand - too bad! - he draws nothing."
+    },
+    {
+      "hp": 4,
+      "name": "Jourdonnais",
+      "description": "He always has a Barrel in play; he can “draw!” when targeted by a BANG!, and with Hearts, it’s a Missed! A real Barrel in play adds to his natural ability, allowing him to try twice to avoid the shot."
+    },
+    {
+      "hp": 3,
+      "name": "Paul Regret",
+      "description": "He always has a Mustang in play; others see him at a distance increased by 1. A real Mustang in play adds to his natural ability, increasing the total distance by 2."
+    },
+    {
+      "hp": 4,
+      "name": "Rose Doolan",
+      "description": "She always has a Scope in play; she sees others at a distance decreased by 1. A real Scope in play adds to her natural ability, decreasing the total distance by 2."
+    },
+    {
+      "hp": 4,
+      "name": "Sid Ketchum",
+      "description": "At any time, he can discard 2 cards from his hand to regain 1 HP. If he wants to and can, he may use this ability multiple times in a row. Remember, you can never have more HP than your initial amount."
+    },
+    {
+      "hp": 4,
+      "name": "Suzy Lafayette",
+      "description": "As soon as she has no cards in hand, she immediately draws a card from the deck."
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Schofield",
+      "range": 2,
+      "copies": [
+        {
+          "value": "JACK",
+          "suit": "CLUBS"
+        },
+        {
+          "value": "QUEEN",
+          "suit": "CLUBS"
+        },
+        {
+          "value": "KING",
+          "suit": "SPADES"
+        }
+      ]
+    },
+    {
+      "name": "Remington",
+      "range": 3,
+      "copies": [
+        {
+          "value": "KING",
+          "suit": "CLUBS"
+        }
+      ]
+    },
+    {
+      "name": "Rev. Carabine",
+      "range": 4,
+      "copies": [
+        {
+          "value": "ACE",
+          "suit": "CLUBS"
+        }
+      ]
+    },
+    {
+      "name": "Winchester",
+      "range": 5,
+      "copies": [
+        {
+          "value": "EIGHT",
+          "suit": "SPADES"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "equippable": false,
+      "name": "BANG!",
+      "description": "The BANG! card is the primary way to take an HP from a player. If you want to play a BANG! card, you must check:\n1. the distance to that player; and\n2. if your weapon reaches at least that firing distance.",
+      "copies": [
+        {
+          "value": "ACE",
+          "suit": "SPADES"
+        },
+        {
+          "value": "TWO",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "THREE",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "FOUR",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "FIVE",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "SIX",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "SEVEN",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "EIGHT",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "NINE",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "TEN",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "JACK",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "QUEEN",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "KING",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "ACE",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "TWO",
+          "suit": "CLUBS"
+        },
+        {
+          "value": "THREE",
+          "suit": "CLUBS"
+        },
+        {
+          "value": "FOUR",
+          "suit": "CLUBS"
+        },
+        {
+          "value": "FIVE",
+          "suit": "CLUBS"
+        },
+        {
+          "value": "SIX",
+          "suit": "CLUBS"
+        },
+        {
+          "value": "SEVEN",
+          "suit": "CLUBS"
+        },
+        {
+          "value": "EIGHT",
+          "suit": "CLUBS"
+        },
+        {
+          "value": "NINE",
+          "suit": "CLUBS"
+        },
+        {
+          "value": "QUEEN",
+          "suit": "HEARTS"
+        },
+        {
+          "value": "KING",
+          "suit": "HEARTS"
+        },
+        {
+          "value": "ACE",
+          "suit": "HEARTS"
+        }
+      ]
+    },
+    {
+      "equippable": true,
+      "name": "Barrel",
+      "description": "This card allows you to “draw!” when you are the target of a BANG!:\n- if it’s Hearts, you are Missed! (as if you had played a Missed!);\n- otherwise, nothing happens.",
+      "copies": [
+        {
+          "value": "QUEEN",
+          "suit": "SPADES"
+        },
+        {
+          "value": "KING",
+          "suit": "SPADES"
+        }
+      ]
+    },
+    {
+      "equippable": false,
+      "name": "Beer",
+      "description": "This card lets you regain 1 HP. You can never have more HP than you started with! You cannot play Beer to regain HP for another player.\nYou can play Beer in two ways:\n1. normally, during your turn;\n2. out of turn, but only if you have just received a fatal shot, i.e., a shot that would take your last HP (and not if you are simply wounded).\nBeer has no effect if there are only 2 players left in the game; in other words, if you play Beer, you do not regain any HP.",
+      "copies": [
+        {
+          "value": "SIX",
+          "suit": "HEARTS"
+        },
+        {
+          "value": "SEVEN",
+          "suit": "HEARTS"
+        },
+        {
+          "value": "EIGHT",
+          "suit": "HEARTS"
+        },
+        {
+          "value": "NINE",
+          "suit": "HEARTS"
+        },
+        {
+          "value": "TEN",
+          "suit": "HEARTS"
+        },
+        {
+          "value": "JACK",
+          "suit": "HEARTS"
+        }
+      ]
+    },
+    {
+      "equippable": false,
+      "name": "Cat Balou",
+      "description": "This card makes any player discard one card, regardless of the distance.",
+      "copies": [
+        {
+          "value": "NINE",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "TEN",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "JACK",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "KING",
+          "suit": "HEARTS"
+        }
+      ]
+    },
+    {
+      "equippable": false,
+      "name": "Stagecoach",
+      "description": "This card allows you to draw 2 cards from the top of the deck.",
+      "copies": [
+        {
+          "value": "NINE",
+          "suit": "SPADES"
+        },
+        {
+          "value": "NINE",
+          "suit": "SPADES"
+        }
+      ]
+    },
+    {
+      "equippable": false,
+      "name": "Gatling",
+      "description": "The Gatling fires a BANG! at all other players, regardless of distance. Even though the Gatling causes a BANG! to all others, it is not a BANG! card. On your turn, you can play as many Gatling as you want, but always only one BANG! card.",
+      "copies": [
+        {
+          "value": "TEN",
+          "suit": "HEARTS"
+        }
+      ]
+    },
+    {
+      "equippable": false,
+      "name": "Missed!",
+      "description": "When you are hit by a BANG!, you can immediately play a Missed! (even out of your turn) to cancel the shot; if you don't, you lose 1 HP. When you run out of HP, you are eliminated from the game (unless you immediately play a Beer). You can only cancel BANG! directed at you, not those directed at others. The BANG! card is discarded even if canceled.",
+      "copies": [
+        {
+          "value": "TWO",
+          "suit": "SPADES"
+        },
+        {
+          "value": "THREE",
+          "suit": "SPADES"
+        },
+        {
+          "value": "FOUR",
+          "suit": "SPADES"
+        },
+        {
+          "value": "FIVE",
+          "suit": "SPADES"
+        },
+        {
+          "value": "SIX",
+          "suit": "SPADES"
+        },
+        {
+          "value": "SEVEN",
+          "suit": "SPADES"
+        },
+        {
+          "value": "EIGHT",
+          "suit": "SPADES"
+        },
+        {
+          "value": "TEN",
+          "suit": "CLUBS"
+        },
+        {
+          "value": "JACK",
+          "suit": "CLUBS"
+        },
+        {
+          "value": "QUEEN",
+          "suit": "CLUBS"
+        },
+        {
+          "value": "KING",
+          "suit": "CLUBS"
+        },
+        {
+          "value": "ACE",
+          "suit": "CLUBS"
+        }
+      ]
+    },
+    {
+      "equippable": true,
+      "name": "Scope",
+      "description": "When you have a Scope in play, you see other players at a distance decreased by 1. Others still see you at the normal distance. Distances less than 1 are considered to be 1.",
+      "copies": [
+        {
+          "value": "ACE",
+          "suit": "SPADES"
+        }
+      ]
+    },
+    {
+      "equippable": true,
+      "name": "Mustang",
+      "description": "When you have a Mustang in play, others see you at a distance increased by 1. You still see others at the normal distance.",
+      "copies": [
+        {
+          "value": "JACK",
+          "suit": "HEARTS"
+        },
+        {
+          "value": "QUEEN",
+          "suit": "HEARTS"
+        }
+      ]
+    },
+    {
+      "equippable": false,
+      "name": "Panic!",
+      "description": "This card allows you to draw a card from a player at a distance of 1. Remember that this distance is not modified by weapons, only by cards like Mustang and/or Scope.",
+      "copies": [
+        {
+          "value": "EIGHT",
+          "suit": "DIAMONDS"
+        },
+        {
+          "value": "JACK",
+          "suit": "HEARTS"
+        },
+        {
+          "value": "QUEEN",
+          "suit": "HEARTS"
+        },
+        {
+          "value": "ACE",
+          "suit": "HEARTS"
+        }
+      ]
+    },
+    {
+      "equippable": false,
+      "name": "Saloon",
+      "description": "This card is a powered-up Beer, as its overall effect is that all players in the game regain 1 HP. You cannot play Saloon out of turn when you are about to lose your last HP: Saloon is not Beer!",
+      "copies": [
+        {
+          "value": "FIVE",
+          "suit": "HEARTS"
+        }
+      ]
+    },
+    {
+      "equippable": false,
+      "name": "Wells Fargo",
+      "description": "This card allows you to draw 3 cards from the top of the deck.",
+      "copies": [
+        {
+          "value": "THREE",
+          "suit": "HEARTS"
+        }
+      ]
+    }
+  ]
+}

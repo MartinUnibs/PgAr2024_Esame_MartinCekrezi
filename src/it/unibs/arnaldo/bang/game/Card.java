@@ -1,13 +1,19 @@
 package it.unibs.arnaldo.bang.game;
 
+import java.util.ArrayList;
+
 public class Card {
-    String name;
-    String cardType;
-    String cardEffect;
-    public Card(String name, String cardType, String cardEffect) {
+    private boolean equippable;
+    private String name;
+    private String description;
+    private ArrayList<Copy> copies;
+
+
+    public Card(boolean equippable, String name, String description, ArrayList<Copy> copies) {
+        this.equippable = equippable;
         this.name = name;
-        this.cardType = cardType;
-        this.cardEffect = cardEffect;
+        this.description = description;
+        this.copies = copies;
     }
 
     public String getName() {

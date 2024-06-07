@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1304655e-d91b-4c11-b3ea-78261684ff97" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/GameManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1304655e-d91b-4c11-b3ea-78261684ff97" name="Changes" comment="commit 1.2">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Bang.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Bang.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/main/BangMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/unibs/arnaldo/bang/main/BangMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,22 +53,32 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.BangMain.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/cekre/Downloads/gson-2.10.1.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\gitrepository\Bang\src\it\unibs\arnaldo\bang" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -84,7 +95,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717745366719</updated>
-      <workItem from="1717745367810" duration="8821000" />
+      <workItem from="1717745367810" duration="19954000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -102,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717745787705</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="commit 1.2">
+      <option name="closed" value="true" />
+      <created>1717755213542</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717755213542</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +140,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="commit 1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit 1.2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/it/unibs/arnaldo/bang/game/GameManager.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

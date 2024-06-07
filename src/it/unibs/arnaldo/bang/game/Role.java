@@ -1,19 +1,18 @@
 package it.unibs.arnaldo.bang.game;
 
 public class Role {
-    private String nome;
-    private String descrizione;
+    private String name;
 
-    public Role(String nome , String descrizione) {
-        this.nome = nome;
-        this.descrizione = descrizione;
+    public Role(String name) {
+        this.name = name;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
+
 }
