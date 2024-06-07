@@ -3,16 +3,20 @@ package it.unibs.arnaldo.bang.game;
 import it.unibs.arnaldo.bang.io.InputManager;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class Deck {
-    private ArrayList<Card> deck;
+    private Stack<Card> deck;
 
-    public Deck() {
-        this.deck = loadDeck();
+    @Override
+    public String toString() {
+        return "Deck{" +
+                "deck=" + deck +
+                '}';
     }
 
-    private ArrayList<Card> loadDeck(){
-        InputManager inputManager = new InputManager();
-        return inputManager.readCards();
+    public Deck(Stack<Card> deck) {
+        this.deck = deck;
     }
+
 }

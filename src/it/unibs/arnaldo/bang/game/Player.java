@@ -1,20 +1,22 @@
 package it.unibs.arnaldo.bang.game;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public class Player {
     private String name;
     private int pf;
     private Role role;
-    private ArrayList<Card> deck;
+    private Stack<Card> deck;
 
     public Player(String name, int pf) {
         this.name = name;
         this.pf = pf;
+        this.deck = new Stack<>();
     }
 
     public void drawCard(Card card) {
-        //TODO: DRAW CARD
+        deck.push(card);
     }
     public void playCard(Card card) {
         //TODO: PLAY CARD
@@ -23,7 +25,9 @@ public class Player {
         //TODO: DISCARD
     }
 
-
+    public Stack<Card> getDeck() {
+        return deck;
+    }
 
     public int getPf() {
         return pf;

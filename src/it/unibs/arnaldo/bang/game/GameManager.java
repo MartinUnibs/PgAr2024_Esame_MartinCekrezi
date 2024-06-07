@@ -1,13 +1,11 @@
 package it.unibs.arnaldo.bang.game;
 
 import it.kibo.fp.lib.AnsiColors;
+import it.kibo.fp.lib.RandomDraws;
 import it.unibs.arnaldo.bang.io.InputManager;
 import it.unibs.arnaldo.bang.main.UserInteraction;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Objects;
+import java.util.*;
 
 public class GameManager {
     private static final String SHERIFF_TRUE = "The Sheriff is: %d";
@@ -40,6 +38,9 @@ public class GameManager {
         setRoles();
         setPlayers();
 
+        for (Player player : players) {
+            player.getDeck().toString();
+        }
         //TODO: MESS + PESCA CARTA
         UserInteraction.printColoredMessage(DRAW_MESSAGE, AnsiColors.YELLOW);
         //TODO:GIOCA CARTE
@@ -74,20 +75,16 @@ public class GameManager {
 
     }
 
-    public void showCard(){
-        //TODO: SHOW CARDS
-    }
-
     public int getnPlayer() {
         return nPlayer;
     }
 
     private ArrayList<Player> generatePlayers() {
-        //TODO: GENERATE PLAYERS
 
         ArrayList<String> shuffledNames = new ArrayList<>(Arrays.asList(PLAYER_NAMES));
         Collections.shuffle(shuffledNames);
 
+        Stack<Card> deck = loadDeck();
 
         for(int i = 0; i < nPlayer; i++){
             Player player = new Player(shuffledNames.get(i), PF_DEF);
@@ -111,6 +108,17 @@ public class GameManager {
         if(nPlayer == 7){
             players.get(6).setRole(roles.get(1));
         }
+        int maxCard = PF_DEF;
+        for(int i = 0; i < players.size();i++){
+            if(players.get(i).getRole().equals(roles.getFirst())){
+                maxCard += 1;
+            } else {
+                maxCard = PF_DEF;
+            }
+            for (int j=0; j < maxCard; j++) {
+                drawFromDeck(deck,players.get(j));
+            }
+        }
 
         return players;
     }
@@ -120,6 +128,15 @@ public class GameManager {
         return inputManager.readRoles();
     }
 
+    private Stack<Card> loadDeck(){
+        InputManager inputManager = new InputManager();
+        return inputManager.readDeck();
+    }
 
+    public void drawFromDeck(Stack<Card> deck , Player player) {
+        int indexDraw = RandomDraws.drawInteger(0, deck.size() - 1);
+        player.drawCard(deck.get(indexDraw));
+        deck.remove(indexDraw);
+    }
 
 }
