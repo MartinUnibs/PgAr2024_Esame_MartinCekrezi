@@ -17,3 +17,4 @@ PgAr2024_Esame_ < CekreziMartin >
  - [ ] Modulo 2: Per un pugno di carte
  - [ ] Modulo 3: Classifica
  - [ ] Modulo 4: Saloon
+ - [X] Modulo 5: Brixia Taunt
